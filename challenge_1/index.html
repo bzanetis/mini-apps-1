@@ -3,38 +3,39 @@
 
 
 <head>
-  <script src="app.js"></script>
   <style>
-  table {width: 100%;}
-  td {width: 33.333%;}
+  table {width: 100%; border-collapse: collapse;}
+  td {width: 33.333%; border: 6px solid #222;}
   td:after {content: ''; display: block; margin-top: 100%;}
   </style>
 </head>
 
 <body>
 
-  <div class="board">
+  <div id="myBoard">
     <table>
       <tr>
-        <td>row1</td>
-        <td>row1</td>
-        <td>row1</td>
+        <td id="t1" onclick="markCelOne()">one</td>
+        <td id="t2" onclick="markCellTwo()">two</td>
+        <td id="t3" onclick="markCellThree()">three</td>
       </tr>
       <tr>
-        <td>row2</td>
-        <td>row2</td>
-        <td>row2</td>
+        <td id="t4" onclick="markCellFour()">four</td>
+        <td id="t5" onclick="markCellFive()">five</td>
+        <td id="t6" onclick="markCellSix()">six</td>
       </tr>
       <tr>
-        <td>row3</td>
-        <td>row3</td>
-        <td>row3</td>
+        <td id="t7" onclick="markCellSeven()">seven</td>
+        <td id="t8" onclick="markCellEight()">eight</td>
+        <td id="t9" onclick="markCellNine()">nine</td>
       </tr>
     </table>
 
   </div>
 
 
+
+<script src="app.js"></script>
 </body>
 
 </html>
