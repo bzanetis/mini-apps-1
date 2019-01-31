@@ -2,7 +2,12 @@ console.log("let's party")
 
 
 //array possibly? updates after each turn
-var board = ["p", "p", "p", "p", "p", "p", "p", "p", "p"];
+var startBoard = [["", "", ""],[ "", "", ""],["", "", ""]];
+
+//currentBoard ---> updates each play by .push into inner row array
+//check after each push to see if there's a winner
+//[row, col] coordinate (nested for loop)
+
 
 var counter = 0;
 
@@ -12,73 +17,42 @@ var counter = 0;
 function whoseTurn() {
   if (counter % 2 === 0) {
     counter++;
-    return "O";
+    return "X";
   } else {
     counter++;
-    return "X";
+    return "0";
   }
 };
 
 
 //truth check on if it's empty
-//need an onClick function that adds an X for each time a td is clicked
+//when below is run --> need to set the [row, col] in board array
 //
 function markCellOne() {
-  console.log(document.getElementById("t1").innerHTML);
-  if (document.getElementById("t1").innerHTML === "") {
-    document.getElementById("t1").innerHTML = whoseTurn();
+
+  if (event.target.innerHTML === "") {
+    event.target.innerHTML = whoseTurn();
+    var col = event.target.id;  //index of each row
+    var row = event.target.className;  //each row is an inner array of col vals
+    console.log(row, col)
+    updateBoard(row, col);
   };
 };
 
-function markCellTwo() {
-  if (document.getElementById("t2").innerHTML === "") {
-    document.getElementById("t2").innerHTML = whoseTurn();
+// horiz --> check all within target row
+//vertical --> check all rows at index = col
+//func to update board
+function updateBoard(row, col) {
+  if (counter % 2 === 0) {
+    startBoard[row][col] = "X";
+  } else {
+    startBoard[row][col] = "O";
   };
-};
-
-function markCellThree() {
-  if (document.getElementById("t3").innerHTML === "") {
-    document.getElementById("t3").innerHTML = whoseTurn();
-  };
-};
-
-function markCellFour() {
-  if (document.getElementById("t4").innerHTML === "") {
-    document.getElementById("t4").innerHTML = whoseTurn();
-  };
-};
-
-function markCellFive() {
-  if (document.getElementById("t5").innerHTML === "") {
-    document.getElementById("t5").innerHTML = whoseTurn();
-  };
-};
-
-function markCellSix() {
-  if (document.getElementById("t6").innerHTML === "") {
-    document.getElementById("t6").innerHTML = whoseTurn();
-  };
-};
-
-function markCellSeven() {
-  if (document.getElementById("t7").innerHTML === "") {
-  document.getElementById("t7").innerHTML = whoseTurn();
-  };
-};
-
-function markCellEight() {
-  if (document.getElementById("t8").innerHTML === "") {
-    document.getElementById("t8").innerHTML = whoseTurn();
-  };
-};
-
-function markCellNine() {
-  if (document.getElementById("t9").innerHTML === "") {
-    document.getElementById("t9").innerHTML = whoseTurn();
-  };
+  console.log(startBoard)
 };
 
 
 
+//func to check board
 
 
