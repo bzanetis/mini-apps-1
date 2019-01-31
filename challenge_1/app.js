@@ -27,43 +27,56 @@ function markCellOne() {
   console.log(document.getElementById("t1").innerHTML);
   if (document.getElementById("t1").innerHTML === "") {
     document.getElementById("t1").innerHTML = whoseTurn();
-  }
-}
-
-function markCellTwo() {
-  document.getElementById("t2").innerHTML = "X";
-
-}
-function markCellThree() {
-  document.getElementById("t3").innerHTML = "X";
-
-}
-
-function markCellFour() {
-  document.getElementById("t4").innerHTML = "X";
-
-}
-
-function markCellFive() {
-  document.getElementById("t5").innerHTML = "X";
-
-}
-
-function markCellSix() {
-  document.getElementById("t6").innerHTML = "X";
-
-}
-
-function markCellSeven() {
-  document.getElementById("t7").innerHTML = "X";
-
-}
-
-function markCellNine() {
-  document.getElementById("t8").innerHTML = "X";
-
+  };
 };
 
+function markCellTwo() {
+  if (document.getElementById("t2").innerHTML === "") {
+    document.getElementById("t2").innerHTML = whoseTurn();
+  };
+};
+
+function markCellThree() {
+  if (document.getElementById("t3").innerHTML === "") {
+    document.getElementById("t3").innerHTML = whoseTurn();
+  };
+};
+
+function markCellFour() {
+  if (document.getElementById("t4").innerHTML === "") {
+    document.getElementById("t4").innerHTML = whoseTurn();
+  };
+};
+
+function markCellFive() {
+  if (document.getElementById("t5").innerHTML === "") {
+    document.getElementById("t5").innerHTML = whoseTurn();
+  };
+};
+
+function markCellSix() {
+  if (document.getElementById("t6").innerHTML === "") {
+    document.getElementById("t6").innerHTML = whoseTurn();
+  };
+};
+
+function markCellSeven() {
+  if (document.getElementById("t7").innerHTML === "") {
+  document.getElementById("t7").innerHTML = whoseTurn();
+  };
+};
+
+function markCellEight() {
+  if (document.getElementById("t8").innerHTML === "") {
+    document.getElementById("t8").innerHTML = whoseTurn();
+  };
+};
+
+function markCellNine() {
+  if (document.getElementById("t9").innerHTML === "") {
+    document.getElementById("t9").innerHTML = whoseTurn();
+  };
+};
 
 
 
